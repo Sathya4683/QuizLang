@@ -1,4 +1,7 @@
-````markdown
+
+
+---
+
 # QuizLang - Document QA with Google Gemini
 
 QuizLang is an interactive Document Question Answering (QA) application powered by Google Gemini and LangChain. It helps users analyze documents (PDF, DOCX, or CSV format), extract answers for exam-related questions, identify important topics for exam preparation, and interact with the AI to clarify doubts on specific topics.
@@ -23,21 +26,20 @@ To run the application, you'll need the following:
 
 Clone the repository to your local machine:
 
-```bash
+```
 git clone https://github.com/Sathya4683/QuizLang.git
 cd QuizLang
 ```
-````
 
 ### Step 2: Install Dependencies
 
-Once you've cloned the repository, install the required dependencies using `pip`:
+After cloning the repository, install the necessary dependencies using `pip`. Run the following command in your terminal:
 
-```bash
+```
 pip install --upgrade torch transformers langchain langchain-core langchain-community langchain_google_genai python-docx PyPDF2 pandas
 ```
 
-This will install the following necessary packages:
+The command will install the following essential libraries:
 
 - `torch`: Deep learning framework for model inference.
 - `transformers`: For working with transformer-based models like Google Gemini.
@@ -50,13 +52,13 @@ This will install the following necessary packages:
 ### Step 3: Set Up Google Gemini API Key
 
 1. **Obtain your Google Gemini API key** from [Google Gemini](https://cloud.google.com/genai).
-2. Once you have the API key, you will be prompted to enter it in the application when you run it.
+2. After obtaining the API key, you will be prompted to enter it in the application when you run it.
 
 ### Step 4: Run the Application
 
-To launch the app, use the following command:
+To run the application, use the following command:
 
-```bash
+```
 streamlit run app.py
 ```
 
@@ -65,43 +67,37 @@ This will start the Streamlit server, and you can access the app in your web bro
 ### Step 5: Using the Application
 
 1. **Upload a Document**:
-
-   - Click on the file uploader in the app to upload a PDF, DOCX, or CSV file.
+   - Use the file uploader in the app to upload a PDF, DOCX, or CSV file.
 
 2. **Enter your Google Gemini API Key**:
-
-   - When prompted, paste your Google Gemini API key into the input field.
+   - Paste your Google Gemini API key when prompted.
 
 3. **Get the Answers**:
-
-   - The app will automatically extract answers to the exam-related questions from the uploaded document.
+   - The app will automatically extract answers to exam-related questions from the uploaded document.
 
 4. **View Important Topics**:
-
-   - The app will display the important topics based on the document’s content.
+   - The app will display important topics based on the document’s content.
 
 5. **Ask Doubts**:
-   - You can interact with the AI by typing in doubts related to important topics. The AI will respond with explanations.
+   - You can interact with the AI by typing in questions related to important topics. The AI will respond with explanations.
 
 ### Step 6: Customize the Application
 
-If you wish to customize the app, you can edit the following files:
+If you wish to customize the application, you can modify the following files:
 
-- `LangChain_model.py`: This contains the functions for initializing the model, processing documents, extracting answers, identifying important topics, and handling Q&A.
-- `app.py`: The main Streamlit app file that sets up the UI and calls functions from `LangChain_model.py`.
+- `LangChain_model.py`: Contains functions for initializing the model, processing documents, extracting answers, identifying important topics, and handling Q&A.
+- `app.py`: The main Streamlit app file responsible for setting up the user interface and calling functions from `LangChain_model.py`.
 
 ### Troubleshooting
 
 - **Error: "API key is invalid"**:
-
   - Ensure you have entered a valid Google Gemini API key.
 
 - **Error: "Unsupported file type"**:
-
   - Verify that the uploaded file is in PDF, DOCX, or CSV format.
 
 - **Error: "No questions found"**:
-  - Ensure your document contains questions that can be extracted for answering.
+  - Make sure the document contains questions that can be extracted for answering.
 
 ## License
 
@@ -110,3 +106,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - This project leverages LangChain and Google Gemini for powerful document analysis and question answering.
+
+---
