@@ -1,6 +1,3 @@
-Here’s a tailored `README.md` for your GitHub repository:
-
-````markdown
 # QuizLang - Document QA with Google Gemini
 
 QuizLang is an interactive Document Question Answering (QA) application powered by Google Gemini and LangChain. It helps users analyze documents (PDF, DOCX, or CSV format), extract answers for exam-related questions, identify important topics for exam preparation, and interact with the AI to clarify doubts on specific topics.
@@ -29,6 +26,7 @@ Clone the repository to your local machine:
 git clone https://github.com/Sathya4683/QuizLang.git
 cd QuizLang
 ```
+
 ````
 
 ### Step 2: Install Dependencies
@@ -112,3 +110,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - This project leverages LangChain and Google Gemini for powerful document analysis and question answering.
+````
