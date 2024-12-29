@@ -51,7 +51,7 @@ The command will install the following essential libraries:
 
 ### Step 3: Set Up Google Gemini API Key
 
-1. **Obtain your Google Gemini API key** from [Google Gemini](https://cloud.google.com/genai).
+1. **Obtain your Google Gemini API key** from [Google Gemini](https://aistudio.google.com/prompts/new_chat).
 2. After obtaining the API key, you will be prompted to enter it in the application when you run it.
 
 ### Step 4: Run the Application
