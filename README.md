@@ -36,7 +36,8 @@ cd QuizLang
 After cloning the repository, install the necessary dependencies using `pip`. Run the following command in your terminal:
 
 ```
-pip install --upgrade torch transformers langchain langchain-core langchain-community langchain_google_genai python-docx PyPDF2 pandas
+pip install --upgrade torch transformers langchain langchain-core langchain-community langchain_google_genai python-docx PyPDF2 pandas streamlit
+
 ```
 
 The command will install the following essential libraries:
