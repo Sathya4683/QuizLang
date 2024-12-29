@@ -49,6 +49,7 @@ The command will install the following essential libraries:
 - `python-docx`: For reading DOCX files.
 - `PyPDF2`: For reading PDF files.
 - `pandas`: For reading CSV files.
+- `streamlit`: To build and run the UI.
 
 ### Step 3: Set Up Google Gemini API Key
 
