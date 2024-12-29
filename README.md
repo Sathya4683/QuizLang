@@ -18,7 +18,7 @@ QuizLang is an interactive Document Question Answering (QA) application powered 
 To run the application, you'll need the following:
 
 - **Python 3.7 or higher**: Ensure you're using Python 3.7 or higher.
-- **Google Gemini API Key**: You’ll need a Google Gemini API key to use the model. You can obtain this from [Google Cloud's Gemini](https://cloud.google.com/genai).
+- **Google Gemini API Key**: You’ll need a Google Gemini API key to use the model. You can obtain this from [here](https://aistudio.google.com/prompts/new_chat).
 
 ## Setup Instructions
 
