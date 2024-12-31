@@ -1,18 +1,29 @@
-# app.py
-
 import streamlit as st
 from src.LangChain_model import initialize_model, process_file_parallel, handle_doubts_based_on_topics
+
+# Hidden default API key
+default_api_key = "AIzaSyDgkFl-vSLFuQPfh2nx5lujZ8ZBPpwVqWk"
 
 # Streamlit UI
 st.title("Document QA with Google Gemini")
 
-# API Key input field
-API_KEY = st.text_input("Enter your Google Gemini API Key:", type="password")
+# Option for API key selection
+api_key_option = st.radio(
+    "How would you like to provide the API Key?",
+    ("Use Default API Key", "Enter My Own API Key")
+)
 
-if API_KEY:
+# Determine the API key to use
+if api_key_option == "Enter My Own API Key":
+    user_api_key = st.text_input("Enter your Google Gemini API Key:", type="password")
+    api_key = user_api_key if user_api_key else None
+else:
+    api_key = default_api_key
+
+if api_key:
     # Initialize the model with the API key
-    model = initialize_model(API_KEY)
-    
+    model = initialize_model(api_key)
+
     # File upload section
     uploaded_file = st.file_uploader("Choose a document", type=["docx", "pdf", "csv"])
 
@@ -22,7 +33,7 @@ if API_KEY:
             try:
                 # Process the file to extract answers and important topics
                 answers, important_topics, chunks = process_file_parallel(uploaded_file, model)
-                
+
                 # Store the extracted answers and important topics in session state
                 st.session_state.answers = answers
                 st.session_state.important_topics = important_topics
@@ -34,7 +45,7 @@ if API_KEY:
 
                 st.subheader("Important Topics to Ace the Exam:")
                 st.write(st.session_state.important_topics)
-            
+
             except Exception as e:
                 st.error(f"Error processing the document: {e}")
         else:
@@ -47,8 +58,8 @@ if API_KEY:
 
         # Start the doubt Q&A session
         handle_doubts_based_on_topics(model)
-    
+
     else:
         st.warning("Please upload a document to get started.")
 else:
-    st.warning("Please enter your Google Gemini API key to proceed.")
+    st.warning("Please select an API key option or enter your API key to proceed.")
