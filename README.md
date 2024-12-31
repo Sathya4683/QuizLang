@@ -1,5 +1,3 @@
-
-
 ---
 
 # QuizLang - Document QA with Google Gemini
@@ -55,6 +53,7 @@ The command will install the following essential libraries:
 
 1. **Obtain your Google Gemini API key** from [Google Gemini](https://aistudio.google.com/prompts/new_chat).
 2. After obtaining the API key, you will be prompted to enter it in the application when you run it.
+3. You can also use the Default API key provided.
 
 ### Step 4: Run the Application
 
@@ -72,7 +71,7 @@ This will start the Streamlit server, and you can access the app in your web bro
    - Use the file uploader in the app to upload a PDF, DOCX, or CSV file.
 
 2. **Enter your Google Gemini API Key**:
-   - Paste your Google Gemini API key when prompted.
+   - Use the default API key or Paste your Google Gemini API key by selecting the appropriate radio button .
 
 3. **Get the Answers**:
    - The app will automatically extract answers to exam-related questions from the uploaded document.
