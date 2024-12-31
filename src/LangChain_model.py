@@ -49,7 +49,7 @@ def chunk_text_by_questions(text, num_questions_per_chunk=29):
 def extract_answers(features):
     answer_template = ChatPromptTemplate.from_messages(
         [("system", "You are an expert exam analyzer."),
-         ("human", "Given these questions: {features}, provide the answer in the format 'Question <number>: Option'.")]
+         ("human", "Given these questions: {features}, provide the answer only in the format 'Question <number>: Option. (No other information must be displayed)'.")]
     )
     return answer_template.format_prompt(features=features)
 
