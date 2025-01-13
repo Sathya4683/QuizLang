@@ -1,8 +1,11 @@
 import streamlit as st
 from src.LangChain_model import initialize_model, process_file_parallel, handle_doubts_based_on_topics
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 # Hidden default API key
-default_api_key = "AIzaSyDgkFl-vSLFuQPfh2nx5lujZ8ZBPpwVqWk"
+default_api_key = os.getenv("GOOGLE_API_KEY")
 
 # Streamlit UI
 st.title("Document QA with Google Gemini")
